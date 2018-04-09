@@ -39,7 +39,8 @@ public abstract class Object3DImpl implements Object3D {
 		// prepare shaders and OpenGL program
 		int vertexShader = GLUtil.loadShader(GLES20.GL_VERTEX_SHADER, vertexShaderCode);
 		int fragmentShader = GLUtil.loadShader(GLES20.GL_FRAGMENT_SHADER, fragmentShaderCode);
-		mProgram = GLUtil.createAndLinkProgram(vertexShader, fragmentShader, variables);
+		//mProgram = GLUtil.createAndLinkProgram(vertexShader, fragmentShader, variables);
+		mProgram = GLUtil.createProgram(vertexShaderCode, fragmentShaderCode);
 	}
 
 	@Override
